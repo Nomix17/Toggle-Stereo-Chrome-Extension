@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 220px;
+  padding: 20px;
+  background: #111;
+  font-family: 'DM Mono', monospace;
+  color: #ccc;
+}
+
+h1 {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #555;
+  margin-bottom: 18px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #222;
+}
+
+.bottom-horizonta-layout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bottom-horizonta-layout p {
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  color: #aaa;
+}
+
+#toggle-stereo-input {
+  appearance: none;
+  -webkit-appearance: none;
+  position: relative;
+  width: 40px;
+  height: 22px;
+  background: #2a2a2a;
+  border: 1px solid #333;
+  border-radius: 11px;
+  cursor: pointer;
+  transition: background 0.25s ease, border-color 0.25s ease;
+  outline: none;
+}
+
+#toggle-stereo-input::before {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 14px;
+  height: 14px;
+  background: #555;
+  border-radius: 50%;
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+#toggle-stereo-input:checked {
+  background: #3a3a3a;
+  border-color: #888;
+}
+
+#toggle-stereo-input:checked::before {
+  transform: translateX(18px);
+  background: #e0e0e0;
+}
+
+#toggle-stereo-input:focus-visible {
+  outline: 1px solid #666;
+  outline-offset: 2px;
+}
